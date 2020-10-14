@@ -5,28 +5,37 @@ using UnityEngine.UI;
 
 public class GameManagerScript : MonoBehaviour
 {
+    //timer vars
     public Slider timerSlider;
     public Text timerText;
     public float gameTime;
-
-    private bool startTimer;
     private bool stopTimer;
+    public Button startButton;
+    //score vars
+    public Slider scoreSlider;
+    public Text scoreText;
+    public int goalScore;
 
     void startGame()
     {
-        
+        stopTimer = false;
+        Destroy(startButton.gameObject);
     }
 
     void Start()
     {
-        startTimer = false;
-        stopTimer = false;
+        stopTimer = true;
         timerSlider.maxValue = gameTime;
         timerSlider.value = gameTime;
+        scoreSlider.maxValue
+        scoreSlider.value = 0;
+
+        startGame();
     }
 
     void Update()
-    {
+    {    
+        //Game timer begins when startGame()
         float time = gameTime - Time.time;
 
         int minutes = Mathf.FloorToInt(time / 60);
@@ -43,7 +52,8 @@ public class GameManagerScript : MonoBehaviour
         {
             timerText.text = textTime;
             timerSlider.value = time;
+            
         }
-    }
 
+    }
 }
