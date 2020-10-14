@@ -4,41 +4,70 @@ using UnityEngine;
 
 public class FloorNode : MonoBehaviour
 {
-    void FixedUpdate()
+
+    public enum FloorNodeState
     {
-        // Bit shift the index of the layer (8) to get a bit mask
-        int layerMask = 1 << 8;
-
-        // This would cast rays only against colliders in layer 8.
-        // But instead we want to collide against everything except layer 8. The ~ operator does this, it inverts a bitmask.
-        layerMask = ~layerMask;
-
-        RaycastHit hit;
-        // Does the ray intersect any objects excluding the player layer
-        if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.up), out hit, Mathf.Infinity, layerMask))
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * hit.distance, Color.green);
-            Debug.Log("Did Hit");
-        }
-        else
-        {
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.up) * 1000, Color.red);
-            Debug.Log("Did not Hit");
-        }
+        Green,
+        Yellow,
+        Red,
+        Black
     }
 
-    public void GreenPhase()
+    public FloorNodeState currentState = FloorNodeState.Red;
+    public float TimebetweenPhases = 5f;
+
+    private Material mat;
+
+    
+
+    private void Start()
     {
-        // goto this point 
+        mat = GetComponent<MeshRenderer>().material;
+        mat.color = Color.red;
     }
 
     public void RedPhase()
     {
+        currentState = FloorNodeState.Red;
+        mat.color = Color.red;
         //Danger go away
+    }
+
+    public void GreenPhase()
+    {
+        currentState = FloorNodeState.Green;
+        mat.color = Color.green;
+        // goto this point 
+    }
+
+    public void YellowPhase()
+    {
+        currentState = FloorNodeState.Yellow;
+        mat.color = Color.yellow;
+        StartCoroutine(YellowPhaseTimer());
+    }
+
+    private IEnumerator YellowPhaseTimer()
+    {
+        print("yellow timer");
+        Debug.Log("yellow timer");
+        TimebetweenPhases = Random.Range(3, 10);
+        yield return new WaitForSeconds(TimebetweenPhases);
+        BlackPhase();
     }
 
     public void BlackPhase()
     {
-        //its gone
+        currentState = FloorNodeState.Black;
+        mat.color = Color.black;
+        StartCoroutine(BlackPhaseTimer());
+    }
+
+    private IEnumerator BlackPhaseTimer()
+    {
+        Debug.Log("Black timer");
+        TimebetweenPhases = Random.Range(10, 20);
+        yield return new WaitForSeconds(TimebetweenPhases);
+        RedPhase();
     }
 }
