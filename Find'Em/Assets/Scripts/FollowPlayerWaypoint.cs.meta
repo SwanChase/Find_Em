@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 guid: 6527231522d82da42bad0ccec1e28451
 MonoImporter:
   externalObjects: {}
@@ -13,11 +14,17 @@ timeCreated: 1480524815
 guid: 6fa04b4743e3947eba4d7b9e5832ea69
 timeCreated: 1477036742
 >>>>>>> Stashed changes
+=======
+<<<<<<< Updated upstream:Find'Em/Assets/NavMeshComponents/Scripts/NavMeshLink.cs.meta
+guid: 6eeb5dc026fdf4b488bc7ae0138ab719
+timeCreated: 1477924439
+>>>>>>> Stashed changes
 licenseType: Pro
 =======
 guid: 6527231522d82da42bad0ccec1e28451
 >>>>>>> Stashed changes:Find'Em/Assets/Scripts/FollowPlayerWaypoint.cs.meta
 MonoImporter:
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 >>>>>>> Stashed changes
 =======
@@ -26,6 +33,12 @@ MonoImporter:
   defaultReferences: []
   executionOrder: 0
   icon: {instanceID: 0}
+=======
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {fileID: 2800000, guid: 92f4afa3e25264f5b964937ccea49ff2, type: 3}
+>>>>>>> Stashed changes
   userData: 
   assetBundleName: 
   assetBundleVariant: 
