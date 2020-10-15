@@ -22,7 +22,6 @@ public class FloorIndex : MonoBehaviour
 
     IEnumerator SetRandom()
     {
-        
         while (running)
         {
             yield return new WaitForSeconds(secondsBetweenNodeLightUp);
