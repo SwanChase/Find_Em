@@ -1,7 +1,18 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
 guid: 6527231522d82da42bad0ccec1e28451
 MonoImporter:
   externalObjects: {}
+=======
+<<<<<<< Updated upstream:Find'Em/Assets/NavMeshComponents/Editor/NavMeshComponentsGUIUtility.cs.meta
+guid: 77fba670b979046f18d52d751e0d4659
+timeCreated: 1480524815
+licenseType: Pro
+=======
+guid: 6527231522d82da42bad0ccec1e28451
+>>>>>>> Stashed changes:Find'Em/Assets/Scripts/FollowPlayerWaypoint.cs.meta
+MonoImporter:
+>>>>>>> Stashed changes
   serializedVersion: 2
   defaultReferences: []
   executionOrder: 0
