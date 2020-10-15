@@ -1,7 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream:Find'Em/Assets/NavMeshComponents/Scripts/NavMeshSurface.cs.meta
 guid: 7a5ac11cc976e418e8d13136b07e1f52
 timeCreated: 1477658803
 licenseType: Pro
+=======
+guid: 178d8366aa1616849b91b66285c51454
+>>>>>>> Stashed changes:Find'Em/Assets/NavMeshComponents/Editor/NavMeshAssetManager.cs.meta
+=======
+guid: 7a5ac11cc976e418e8d13136b07e1f52
+timeCreated: 1477658803
+licenseType: Pro
+>>>>>>> Stashed changes
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []

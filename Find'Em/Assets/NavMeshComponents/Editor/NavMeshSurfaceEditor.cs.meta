@@ -1,6 +1,7 @@
 fileFormatVersion: 2
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Find'Em/Assets/NavMeshComponents/Editor/NavMeshSurfaceEditor.cs.meta
 guid: 1c32167dbf3314852b6006a288eb449b
 timeCreated: 1476968447
@@ -8,6 +9,11 @@ licenseType: Pro
 =======
 guid: 178d8366aa1616849b91b66285c51454
 >>>>>>> Stashed changes:Find'Em/Assets/NavMeshComponents/Editor/NavMeshAssetManager.cs.meta
+=======
+guid: 1c32167dbf3314852b6006a288eb449b
+timeCreated: 1476968447
+licenseType: Pro
+>>>>>>> Stashed changes
 =======
 guid: 1c32167dbf3314852b6006a288eb449b
 timeCreated: 1476968447
