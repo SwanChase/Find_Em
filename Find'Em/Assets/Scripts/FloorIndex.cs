@@ -11,6 +11,9 @@ public class FloorIndex : MonoBehaviour
 
     public FloorNode[] floor;
 
+    private int amount;
+    private int maxAmountOfGreen;
+
     void Start()
     {
         floor = transform.GetComponentsInChildren<FloorNode>();
@@ -19,11 +22,13 @@ public class FloorIndex : MonoBehaviour
 
     IEnumerator SetRandom()
     {
+        
         while (running)
         {
             yield return new WaitForSeconds(secondsBetweenNodeLightUp);
             print("lighting up");
             floor[Random.Range(0, floor.Length)].GreenPhase();
+            amount ++;
         }
     }
 }
