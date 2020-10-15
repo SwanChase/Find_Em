@@ -15,7 +15,7 @@ public class GameManagerScript : MonoBehaviour
     public Slider scoreSlider;
     public Text scoreText;
     public int goalScore;
-    public int score;
+    public static int score;
 
     void startGame()
     {
@@ -40,7 +40,6 @@ public class GameManagerScript : MonoBehaviour
     {
         //Game timer begins when startGame()
         float time = gameTime - Time.time;
-        score += 1;
 
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time - minutes * 60f);

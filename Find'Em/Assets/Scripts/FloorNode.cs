@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FloorNode : MonoBehaviour
 {
-
     public enum FloorNodeState
     {
         Green,
@@ -17,8 +16,7 @@ public class FloorNode : MonoBehaviour
     public float TimebetweenPhases = 5f;
 
     private Material mat;
-
-    
+    public bool yellowPhase = false;
 
     private void Start()
     {
@@ -42,8 +40,9 @@ public class FloorNode : MonoBehaviour
 
     public void YellowPhase()
     {
-        currentState = FloorNodeState.Yellow;
+        yellowPhase = true;
         mat.color = Color.yellow;
+        currentState = FloorNodeState.Yellow;
         StartCoroutine(YellowPhaseTimer());
     }
 
@@ -58,6 +57,7 @@ public class FloorNode : MonoBehaviour
 
     public void BlackPhase()
     {
+        yellowPhase = false;
         currentState = FloorNodeState.Black;
         mat.color = Color.black;
         StartCoroutine(BlackPhaseTimer());
