@@ -1,7 +1,11 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Find'Em/Assets/Scripts/GDS/FloorIndex1.cs.meta
+guid: ae2dfb940598dec48b6334e92382f434
+=======
 guid: 77fba670b979046f18d52d751e0d4659
 timeCreated: 1480524815
 licenseType: Pro
+>>>>>>> master:Find'Em/Assets/NavMeshComponents/Editor/NavMeshComponentsGUIUtility.cs.meta
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []

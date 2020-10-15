@@ -30,6 +30,16 @@ public class Player2D : MonoBehaviour
             print("hit, and lit down");
 
             floorNode.YellowPhase();
+
+            if (floorNode.currentState == FloorNode.FloorNodeState.Yellow)
+            {
+                GameManagerScript.score++;
+            }
+
+            if (floorNode.currentState == FloorNode.FloorNodeState.Black)
+            {
+                GameManagerScript.score -= 1;
+            }
         }
         else
         {

@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Find'Em/Assets/Scenes/GDSSceneSettings.lighting.meta
+<<<<<<< HEAD
+guid: 5dfeb72cfaceba7419ba80fbd2d3e9e0
+=======
+guid: 2fcaadcca82f25e42ad6bd2571619a3f
+>>>>>>> Development
+=======
 guid: f6a95445e47a83e428bc0c75b797bac2
+>>>>>>> master:Find'Em/Assets/Scenes/SampleScene/NavMesh-Navmesh.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0

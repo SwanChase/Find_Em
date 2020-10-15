@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Find'Em/Assets/Scripts/GDS/FloorNode1.cs.meta
+guid: f27142d54b5a79c4cb90c28539f720bb
+=======
 guid: 178d8366aa1616849b91b66285c51454
+>>>>>>> master:Find'Em/Assets/NavMeshComponents/Editor/NavMeshAssetManager.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
