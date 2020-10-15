@@ -1,5 +1,4 @@
 fileFormatVersion: 2
-<<<<<<< Updated upstream
 <<<<<<< Updated upstream:Find'Em/Assets/NavMeshComponents/Scripts/NavMeshLink.cs.meta
 guid: 6eeb5dc026fdf4b488bc7ae0138ab719
 timeCreated: 1477924439
@@ -7,11 +6,6 @@ licenseType: Pro
 =======
 guid: 6527231522d82da42bad0ccec1e28451
 >>>>>>> Stashed changes:Find'Em/Assets/Scripts/FollowPlayerWaypoint.cs.meta
-=======
-guid: 6eeb5dc026fdf4b488bc7ae0138ab719
-timeCreated: 1477924439
-licenseType: Pro
->>>>>>> Stashed changes
 MonoImporter:
   serializedVersion: 2
   defaultReferences: []
