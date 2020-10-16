@@ -11,7 +11,7 @@ public class FloorIndex : MonoBehaviour
 
     public FloorNode[] floor;
 
-    private int amount;
+    private int amountOfGreen;
     private int maxAmountOfGreen;
 
     void Start()
@@ -27,7 +27,7 @@ public class FloorIndex : MonoBehaviour
             yield return new WaitForSeconds(secondsBetweenNodeLightUp);
             print("lighting up");
             floor[Random.Range(0, floor.Length)].GreenPhase();
-            amount ++;
+            amountOfGreen++;
         }
     }
 }

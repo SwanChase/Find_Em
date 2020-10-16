@@ -19,9 +19,4 @@ public class Player2DMovement : MonoBehaviour
         gameObject.transform.position = PlayerController.transform.position * movementMultiplier + origionalPos;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
