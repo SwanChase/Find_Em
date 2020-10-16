@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
 
 public class Player2D : MonoBehaviour
@@ -18,7 +19,7 @@ public class Player2D : MonoBehaviour
             FloorNode floorNode = other.GetComponent<FloorNode>();
 
             if(floorNode == null)
-            {
+            { 
                 return;
             }
 
@@ -30,16 +31,6 @@ public class Player2D : MonoBehaviour
             print("hit, and lit down");
 
             floorNode.YellowPhase();
-
-            if (floorNode.currentState == FloorNode.FloorNodeState.Yellow)
-            {
-                GameManagerScript.score++;
-            }
-
-            if (floorNode.currentState == FloorNode.FloorNodeState.Black)
-            {
-                GameManagerScript.score -= 1;
-            }
         }
         else
         {

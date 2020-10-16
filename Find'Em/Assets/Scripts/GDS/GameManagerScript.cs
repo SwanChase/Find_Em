@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,17 +11,28 @@ public class GameManagerScript : MonoBehaviour
     public Text timerText;
     public float gameTime;
     private bool stopTimer;
-    public Button startButton;
+    public float preTime;
+    public Text preText;
     //score vars
     public Slider scoreSlider;
     public Text scoreText;
     public int goalScore;
     public static int score;
 
-    void startGame()
+    void StartGame()
     {
         stopTimer = false;
-        Destroy(startButton.gameObject);
+        Destroy(preText.gameObject);
+    }
+
+    void PreGameTimer()
+    {
+        float time = preTime - Time.time;
+        preText.GetComponent<Text>().text = "Game starting in " + ((int)time).ToString(); ;
+        if (time <= 0)
+        {
+            StartGame();
+        }
     }
 
     void Start()
@@ -33,13 +45,18 @@ public class GameManagerScript : MonoBehaviour
         score = 0;
         scoreSlider.maxValue = goalScore;
         scoreSlider.value = score;
-        startGame();
     }
 
     void Update()
     {
-        //Game timer begins when startGame()
-        float time = gameTime - Time.time;
+        //wait 10 s
+        if (stopTimer == true)
+        {
+            PreGameTimer();
+        }
+
+        //Game timer & score
+        float time = gameTime - Time.time + preTime;
 
         int minutes = Mathf.FloorToInt(time / 60);
         int seconds = Mathf.FloorToInt(time - minutes * 60f);
