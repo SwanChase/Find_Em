@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Globalization;
 using UnityEngine;
@@ -28,7 +29,7 @@ public class GameManagerScript : MonoBehaviour
     void PreGameTimer()
     {
         float time = preTime - Time.time;
-        preText.GetComponent<Text>().text = "Game starting in " + ((int)time).ToString(); ;
+        preText.GetComponent<Text>().text = "Game starting in " + ((int)time).ToString(); 
         if (time <= 0)
         {
             StartGame();
@@ -72,7 +73,7 @@ public class GameManagerScript : MonoBehaviour
         {
             timerText.text = textTime;
             timerSlider.value = time;
-            scoreText.GetComponent<Text>().text = score.ToString();
+            scoreText.GetComponent<Text>().text = score.ToString() + "/12k";
             scoreSlider.value = score;
         }
 

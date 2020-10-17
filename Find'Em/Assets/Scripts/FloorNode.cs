@@ -14,20 +14,26 @@ public class FloorNode : MonoBehaviour
 
     public FloorNodeState currentState = FloorNodeState.Red;
     public float TimebetweenPhases = 5f;
-
+    
+    [SerializeField]
+    private Texture normalText,dangerText,yellowText;
+    
+    private Renderer renderer;
     private Material mat;
     public bool yellowPhase = false;
 
     private void Start()
     {
+        renderer = gameObject.GetComponent<MeshRenderer>();
         mat = GetComponent<MeshRenderer>().material;
-        mat.color = Color.red;
+        mat.color = Color.black;
     }
 
     public void RedPhase()
     {
         currentState = FloorNodeState.Red;
-        mat.color = Color.red;
+        mat.color = Color.black;
+        renderer.material.mainTexture = normalText;
         //Danger go away
     }
 
@@ -35,14 +41,24 @@ public class FloorNode : MonoBehaviour
     {
         currentState = FloorNodeState.Green;
         mat.color = Color.green;
+        renderer.material.mainTexture = normalText;
         // goto this point 
     }
 
-    public void YellowPhase()
+    public void YellowPhase() // this reduces points
     {
         yellowPhase = true;
         mat.color = Color.yellow;
         currentState = FloorNodeState.Yellow;
+        StartCoroutine(YellowPhaseTimer());
+    }
+
+    public void DangerPhase() // this doesnt reduce points
+    {
+        yellowPhase = true;
+        mat.color = Color.yellow;
+        currentState = FloorNodeState.Yellow;
+        renderer.material.mainTexture = yellowText;
         StartCoroutine(YellowPhaseTimer());
     }
 
@@ -58,8 +74,9 @@ public class FloorNode : MonoBehaviour
     public void BlackPhase()
     {
         yellowPhase = false;
+        mat.color = Color.red;
         currentState = FloorNodeState.Black;
-        mat.color = Color.black;
+        renderer.material.mainTexture = dangerText;
         StartCoroutine(BlackPhaseTimer());
     }
 

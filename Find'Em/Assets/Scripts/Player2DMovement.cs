@@ -18,5 +18,4 @@ public class Player2DMovement : MonoBehaviour
     {
         gameObject.transform.position = PlayerController.transform.position * movementMultiplier + origionalPos;
     }
-
 }
